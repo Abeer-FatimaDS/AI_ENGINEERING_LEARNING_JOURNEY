@@ -164,3 +164,195 @@
 
 # name, age, id = info # bcz info is now containing tuple 
 # print(f"Name: {name}, Age: {age}, id: {id}")  # tuple unpacking
+
+
+
+
+
+# # #-----------------------------------SETS---------------------------------------------
+# # """ it has unordered nature you cannot access any element at any time
+# #     it is mutable but you can only change hashable values (if set contains 3 against 3 in memory a hash value will be stores and if we add set.add(3) 3 again in that set it will not be added bcz both 3 have the same hashes so 3 is now not hashable)
+# #     it cannot have duplicates [1,2,3]
+# #     Accessed using methods
+# #  """
+
+# # SET = {10,45,32,44}
+# # for i in SET:
+# #     print(i)
+# #     #it will print unordered elements 
+
+# # SET OPERATIONS
+
+# a = {1, 2, 3, 4}
+# b = {3, 4, 5, 6}
+
+# print(a | b)   # Union         → {1,2,3,4,5,6}
+# print(a & b)   # Intersection  → {3,4}
+# print(a - b)   # Difference    → {1,2}
+# print(a ^ b )  # Symmetric diff→ {1,2,5,6}
+
+
+
+# # FOR MORE SET OPERATIONS & SET METHODS
+# # GO TO THIS LINK: https://www.w3schools.com/python/python_ref_set.asp
+
+
+
+
+# #-----------------------------------DICTIONARY---------------------------------------------
+# """ it has ordered nature you can access any element at any time but not my index but by using keys
+#     it is mutable
+#     it does not have duplicate
+#     Accessed using keys
+#  """
+
+# d = {10:11,20:200,30:300,40:400}
+
+# #vanilla python 
+
+# d[50] = 500 #creating a new key value pair 
+# print(d[30]) # 300 - Reading a value 
+# d[10] = 100 #updating a key value that already exist 
+
+
+#methods approach :  https://www.w3schools.com/python/python_ref_dictionary.asp
+# d = {10:100,20:200,30:300,40:400}
+
+
+# print(d.get(10))
+# print(d.items())
+# print(d.keys())
+# print(d.values())
+# # print(d.pop(20))
+# # d.popitem()
+# print(d.setdefault(60,3000))
+
+
+# d.update({70:700})
+
+# print(d)
+
+
+#traversing (loops) 
+
+
+# d = {10:100,20:200,30:300,40:400}
+
+# for i in d:
+#     print(f"key {i} : value {d[i]}")
+
+#questions
+
+# d1 = {"a":10,"b":20,"c":30} 
+# d2 = {"c":40,"d":50,"e":60} 
+
+# for i in d2:
+#     d1[i] = d2[i]
+
+# print(d1)
+
+
+
+# d1 = {"a":10,"b":20,"c":30} 
+
+
+# sum = 0 
+
+# for i in d1:
+#     sum = sum + d1[i]
+
+# print(sum)
+
+# l = ["a","b","a","c","b","a","c","a","b"]
+
+# d = {}
+
+# for i in l:
+#     if i in d.keys():
+#         d[i] = d[i] + 1
+#     else:
+#         d[i] = 1
+
+# print(d)
+
+
+
+# d1 = {"a":10,"b":20,"c":30} 
+# d2 = {"c":40,"d":50,"e":60} 
+
+# for i in d2:
+#     if i in d1.keys():
+#         d1[i] = d1[i] + d2[i]
+#     else:
+#         d1[i] = d2[i]
+
+# print(d1)
+
+
+#---------------------EXCEPTION / ERROR HANDLING ----------------
+
+# a = 12 
+
+# if a == 12:
+#     print("hello")
+
+
+# a = 10 
+# b = int(input("please tell a number :- "))
+
+# print(a/b)
+
+# a = "10"
+# b = 5 
+# print(a + b)
+
+# num = int("hello")
+
+
+# a = int(input("please tell your 1st number:-  "))
+# b = int(input("please tell your 2nd number:-  "))
+
+# try:
+#     print(a/b)
+# except Exception as err:
+#     print(f"Sorry an error occured as {err}")
+
+# finally:
+#     print("if there are errors or there are no errors I will run no matter what ")
+
+
+
+# name = input("tell your name :- ")
+
+# print(f"Hello your name is {name}")
+
+
+# age = int(input("tell your age :- "))
+
+# if age < 18:
+#     raise TypeError("you are not eligible")
+
+# print("you are elegible")
+
+
+
+
+#----------------FILE HANDLING-------------------
+ # 4 MODES IN FILE r , w , a , x
+ # w, a , x can create files 
+ # r = Read only (file must exist), w = Write , a = append to end, x = Create (fails if exists)
+
+# open("Hello.txt","x")
+
+# file = open("ABEER.txt", "w")
+# data = input("What u want to write in your file: ")
+# print(type(data))
+# file.write(data)
+# file = open("PYTHON/Number_Game_Using_whileLoop.py", "r")
+
+# print(file.read())
+
+# file.close()
+
+with open ("ABEER.txt", "a") as f:
+    f.write("" + " I LOVE YOU")
